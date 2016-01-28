@@ -1,0 +1,8 @@
+<numbers>
+   <phone>
+      <string name = "phonenumber1">555-555-5555</string>
+   </phone>
+   <phone>
+      <string name = "phonenumber2">555-555-5555</string>
+   </phone>
+</numbers>
