@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
  * Created by Nike on 27.01.2016.
  */
 public class StackWether {
-    private Date date=new Date();
+    Calendar Date2 = Calendar.getInstance();
     private int maxPressure,minPressure,maxTemp,minTemp,minWind,maxWind,maxRelwet,minRelwet,minHeat,maxHeat;
     public StackWether(){}
 
