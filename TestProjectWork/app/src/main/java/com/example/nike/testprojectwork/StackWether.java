@@ -1,6 +1,8 @@
 package com.example.nike.testprojectwork;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * Created by Nike on 27.01.2016.
@@ -10,13 +12,10 @@ public class StackWether {
     private int maxPressure,minPressure,maxTemp,minTemp,minWind,maxWind,maxRelwet,minRelwet,minHeat,maxHeat;
     public StackWether(){}
 
-    public Date getDate(){return date;}
+    public Calendar getDate(){return Date2;}
     public void setDate(int d,int m,int y,int h){
-        this.date.setDate(d);
-        this.date.setMonth(m);
-        this.date.setYear(y);
-        this.date.setHours(h);
-    }
+        Date2.set(y,m-1,d,h,00);
+           }
     public int getMaxPressure(){return maxPressure;}
     public int getMinPressure(){return minPressure;}
     public void setMaxPressure(int maxPressure){this.maxPressure=maxPressure;}

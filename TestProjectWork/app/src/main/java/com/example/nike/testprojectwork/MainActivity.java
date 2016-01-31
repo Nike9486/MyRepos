@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 try {
-                    intent.putExtra("Data",sdf.format(mt.get().get(position).getDate()));
+                    intent.putExtra("Data",sdf.format(mt.get().get(position).getDate().getTime()));
                     intent.putExtra("maxPresure",String.valueOf(mt.get().get(position).getMaxPressure()));
                     intent.putExtra("minPresure",String.valueOf(mt.get().get(position).getMinPressure()));
                     intent.putExtra("maxTemperature",String.valueOf(mt.get().get(position).getMaxTemp()));

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -16,7 +17,7 @@ public class WetherAdapter extends BaseAdapter{
 Context ctx;
 LayoutInflater layoutInflater;
 List<StackWether> wethers;
-    SimpleDateFormat sdf = new SimpleDateFormat("dd:MM:yy \n время: H");
+    SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy \n время: H");
 
 
     public WetherAdapter(Context context,List<StackWether> wether){
@@ -47,7 +48,8 @@ List<StackWether> wethers;
             view=layoutInflater.inflate(R.layout.row_wether,parent,false);
         }
         StackWether stack=getWether(position);
-        ((TextView)view.findViewById(R.id.data)).setText(sdf.format(stack.getDate()));
+        ((TextView)view.findViewById(R.id.data)).setText(sdf.format(stack.getDate().getTime()
+        ));
         ((TextView)view.findViewById(R.id.temper)).setText(stack.getMinHeat()+"..."+stack.getMaxHeat());
         return view;
     }
